@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Cell,
   ColumnDef,
   flexRender,
   getCoreRowModel,
@@ -31,15 +32,27 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
   });
 
+  const handleRenderCell = (cell: Cell<TData, unknown>) => {
+    const value = cell.getValue();
+    if (typeof value === "boolean") {
+      return <p>isBooleam</p>;
+    } else if (typeof value === "string") {
+      return <p>isString</p>;
+    }
+    return flexRender(cell.column.columnDef.cell, cell.getContext());
+  };
   return (
-    <div className="rounded-md border text-white">
+    <div className="rounded-md border text-white hover:bg-red">
       <Table>
-        <TableHeader>
+        <TableHeader className="bg-[#45d3ce]">
           {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
+            <TableRow key={headerGroup.id} className="hover:bg-[#45d3ce]">
               {headerGroup.headers.map((header) => {
                 return (
-                  <TableHead key={header.id}>
+                  <TableHead
+                    key={header.id}
+                    className="text-black hover:bg-red"
+                  >
                     {header.isPlaceholder
                       ? null
                       : flexRender(
@@ -58,11 +71,10 @@ export function DataTable<TData, TValue>({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
+                className="hover:bg-black"
               >
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
+                  <TableCell key={cell.id}>{handleRenderCell(cell)}</TableCell>
                 ))}
               </TableRow>
             ))
