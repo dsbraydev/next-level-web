@@ -28,8 +28,8 @@ export const columns: ColumnDef<any>[] = [
     header: "Carnivore",
   },
   {
-    accessorKey: "ice",
-    header: "Ice",
+    accessorKey: "bible",
+    header: "Bible",
   },
   {
     accessorKey: "topG",

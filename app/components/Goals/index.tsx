@@ -11,7 +11,7 @@ async function getData(): Promise<any[]> {
       reading: true,
       gym: false,
       carnivore: true,
-      ice: true,
+      bible: true,
       topG: true,
     },
     {
@@ -22,7 +22,7 @@ async function getData(): Promise<any[]> {
       reading: true,
       gym: false,
       carnivore: true,
-      ice: true,
+      bible: true,
       topG: true,
     },
   ];
