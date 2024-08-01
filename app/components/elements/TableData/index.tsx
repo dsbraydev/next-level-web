@@ -16,6 +16,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import CustomCheckbox from "../CustomCheckbox";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -35,7 +36,7 @@ export function DataTable<TData, TValue>({
   const handleRenderCell = (cell: Cell<TData, unknown>) => {
     const value = cell.getValue();
     if (typeof value === "boolean") {
-      return <p>isBooleam</p>;
+      return <CustomCheckbox checked={value} />;
     } else if (typeof value === "string") {
       return <p>isString</p>;
     }
