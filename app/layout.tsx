@@ -6,8 +6,8 @@ import Sidebar from "./components/Sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Trade hero",
-  description: "Trade hero",
+  title: "Upgrade Self",
+  description: "Upgrade Self",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
         <Navbar />
         <div className="grid" style={{ gridTemplateColumns: "15vw auto" }}>
           <Sidebar />
-          <div>{children}</div>
+          <div className="p-5">{children}</div>
         </div>
       </body>
     </html>
