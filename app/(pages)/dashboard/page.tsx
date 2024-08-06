@@ -1,7 +1,6 @@
-export default function Dashboard() {
-  return (
-    <div className="flex">
-      <h1>Dashboard</h1>
-    </div>
-  );
-}
+import PageHeader from "@/app/components/elements/PageHeader";
+const Dashboard = () => {
+  return <PageHeader header="Dashboard" />;
+};
+
+export default Dashboard;

@@ -1,9 +1,6 @@
+import Journal from "@/app/components/Journal";
 const JournalPage = () => {
-  return (
-    <div>
-      <h1>JournalPage</h1>
-    </div>
-  );
+  return <Journal />;
 };
 
 export default JournalPage;

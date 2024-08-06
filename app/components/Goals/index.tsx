@@ -1,6 +1,6 @@
 import { columns } from "../elements/TableData/columns";
 import { DataTable } from "../elements/TableData";
-
+import PageHeader from "../elements/PageHeader";
 async function getData(): Promise<any[]> {
   return [
     {
@@ -29,7 +29,8 @@ async function getData(): Promise<any[]> {
 const Goals = async () => {
   const data = await getData();
   return (
-    <div className="p-5">
+    <div>
+      <PageHeader header="Goals" />
       <DataTable columns={columns} data={data} />
     </div>
   );

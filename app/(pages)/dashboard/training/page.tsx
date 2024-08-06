@@ -1,9 +1,7 @@
+import Training from "@/app/components/Training";
+
 const TrainingPage = () => {
-  return (
-    <div>
-      <h1>Training</h1>
-    </div>
-  );
+  return <Training />;
 };
 
 export default TrainingPage;

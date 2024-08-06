@@ -20,6 +20,10 @@ const SIDEBAR_LINKS = [
     label: "Training",
     href: "/dashboard/training",
   },
+  {
+    label: "Budget",
+    href: "/dashboard/budget",
+  },
 ];
 
 interface LinkProps {
@@ -30,7 +34,6 @@ interface LinkProps {
 const Sidebar = () => {
   const path = usePathname();
   const dashboard = (path: string) => path.includes("/dashboard");
-
   if (!dashboard(path)) return null;
   return (
     <div
@@ -40,7 +43,11 @@ const Sidebar = () => {
       {SIDEBAR_LINKS.map((link: LinkProps, i: number) => {
         return (
           <Link key={i} href={link.href}>
-            <Button className="w-full bg-[#0fd3cf] hover:opacity-80 hover:bg-[#0fd3cf] transition duration-300 text-black">
+            <Button
+              className={`w-full bg-[#0fd3cf] hover:opacity-70 hover:bg-[#0fd3cf] transition duration-300 text-black ${
+                path === link.href ? "opacity-70" : ""
+              }`}
+            >
               {link.label}
             </Button>
           </Link>
