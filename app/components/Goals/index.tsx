@@ -12,7 +12,6 @@ async function getData(): Promise<any[]> {
       gym: false,
       carnivore: true,
       bible: true,
-      topG: true,
     },
     {
       id: "2",
@@ -23,16 +22,17 @@ async function getData(): Promise<any[]> {
       gym: false,
       carnivore: true,
       bible: true,
-      topG: true,
     },
   ];
 }
 
-export default async function Goals() {
+const Goals = async () => {
   const data = await getData();
   return (
     <div className="p-5">
       <DataTable columns={columns} data={data} />
     </div>
   );
-}
+};
+
+export default Goals;

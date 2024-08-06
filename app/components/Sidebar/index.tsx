@@ -27,12 +27,11 @@ interface LinkProps {
   href: string;
 }
 
-export default function Sidebar() {
+const Sidebar = () => {
   const path = usePathname();
   const dashboard = (path: string) => path.includes("/dashboard");
 
   if (!dashboard(path)) return null;
-
   return (
     <div
       className="bg-[#181717] p-5 flex flex-col gap-4"
@@ -49,4 +48,5 @@ export default function Sidebar() {
       })}
     </div>
   );
-}
+};
+export default Sidebar;

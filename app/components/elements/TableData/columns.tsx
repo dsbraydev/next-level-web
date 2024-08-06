@@ -1,5 +1,4 @@
 "use client";
-
 import { ColumnDef } from "@tanstack/react-table";
 
 export const columns: ColumnDef<any>[] = [
@@ -30,9 +29,5 @@ export const columns: ColumnDef<any>[] = [
   {
     accessorKey: "bible",
     header: "Bible",
-  },
-  {
-    accessorKey: "topG",
-    header: "TopG",
   },
 ];
