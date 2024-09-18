@@ -32,7 +32,7 @@ export default async function Goals() {
   const data = await getData();
   return (
     <div className="p-5">
-      <DataTable columns={columns} data={data} />
+      {/* <DataTable columns={columns} data={data} /> */}
     </div>
   );
 }
