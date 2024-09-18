@@ -1,16 +1,26 @@
-export interface IExpences {
-    name: string;
-    amount: number;
-    type: string;
-  }
+export type IExpense = {
+  name: string;
+  amount: number;
+  type: string;
+}
 
-  export interface IIncome {
-    amount: number;
-    additionalIncome: number;
-    tax: number;
-    expenses: IExpences[];
-  }
-  
-  export interface IFinances {
-    finances: IIncome;
-  }
+export type IFinances = {
+  income: number;
+  additionalIncome: number;
+  tax: number;
+  expenses: IExpense[];
+}
+
+export type IBudget = {
+  finances: IFinances;
+}
+
+export interface IIncome {
+  income: number;
+  additionalIncome: number;
+  tax: number;
+}
+
+export interface IExpenses {
+  expenses: IExpense[];
+}
