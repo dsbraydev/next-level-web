@@ -1,7 +1,9 @@
-const Budget = () => {
+import { IFinances } from "@/app/types/budget";
+import PageHeader from "../elements/PageHeader";
+const Budget = ({ finances }: IFinances) => {
   return (
     <div>
-      <h1>Budget</h1>
+      <PageHeader title="Budget" />
     </div>
   );
 };

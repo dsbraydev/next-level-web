@@ -8,17 +8,21 @@ const SIDEBAR_LINKS = [
     label: "Dashboard",
     href: "/dashboard",
   },
+  // {
+  //   label: "Goals",
+  //   href: "/dashboard/goals",
+  // },
+  // {
+  //   label: "Journal",
+  //   href: "/dashboard/journal",
+  // },
+  // {
+  //   label: "Training",
+  //   href: "/dashboard/training",
+  // },
   {
-    label: "Goals",
-    href: "/dashboard/goals",
-  },
-  {
-    label: "Journal",
-    href: "/dashboard/journal",
-  },
-  {
-    label: "Training",
-    href: "/dashboard/training",
+    label: "Budget",
+    href: "/dashboard/budget",
   },
 ];
 
@@ -41,7 +45,7 @@ export default function Sidebar() {
       {SIDEBAR_LINKS.map((link: LinkProps, i: number) => {
         return (
           <Link key={i} href={link.href}>
-            <Button className="w-full bg-[#0fd3cf] hover:opacity-80 hover:bg-[#0fd3cf] transition duration-300 text-black">
+            <Button className="w-full bg-[#f57c00] hover:opacity-80 hover:bg-[#f57c00] transition duration-300 text-black">
               {link.label}
             </Button>
           </Link>
